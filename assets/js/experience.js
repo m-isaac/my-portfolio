@@ -5,25 +5,70 @@ AOS.init();
 const experiencecards = document.querySelector(".experience-cards");
 const exp = [
   {
-    title: "Software Development Intern",
-    cardImage: "assets/images/experience-page/flipkart.jpg",
-    place: "Flipkart",
-    time: "(May, 2020 - present)",
-    desp: "<li>Worked to migrate Flipkart lite’s product page to AMP pages so that they load up instantly.</li> <li>Made changes in the current progressive web app of Flipkart to react to different actions performed on AMP page.</li> <li>Created a node module called “fk-amp” which abstracts all the files and middlewares and can be easily imported and used from express server.</li>",
+    title: "Senior Frontend engineer",
+    cardImage: "assets/images/experience-page/idgard.jpg",
+    place: "idgard GmbH",
+    time: "(October, 2023 - present)",
+    desp: [
+      "Built complex UI features integrating the company’s core product with Microsoft Office apps (Outlook, Word, Excel, Teams) via Office plugins, often leveraging AI tools like Claude, Cursor, and GitHub Copilot.",
+
+      "Resolved a long-standing development bottleneck by making the Outlook plugin testable locally, eliminating the need for live test deployments and drastically improving the development feedback loop.",
+
+      "Developed an automation script to scaffold new apps in the team’s monorepo within seconds—complete with linting, build, serve, and test setups—accelerating development startup time.",
+
+      "Configured backend API mocking in the dev environment, making it easier for the team to write meaningful integration tests.",
+    ],
   },
   {
-    title: "Student Developer",
-    cardImage: "assets/images/experience-page/gsoc.png",
-    place: "Google Summer Of Code",
-    time: "(Mar - Aug, 2019)",
-    desp: "<li>Worked with MOZILLA as a part of Google Summer Of Code.</li><li>Worked on Extension Activity Monitor which is a privileged extension for Firefox that uses the activityLog API (privileged API) to monitor the activities of the other installed extensions.</li><li>The activityLog API listens for logs from other installed extensions.</li>",
+    title: "Full-stack Web Developer",
+    cardImage: "assets/images/experience-page/check24.jpg",
+    place: "CHECK24 GmbH – Munich, Germany",
+    time: "(December 2022 - June, 2023)",
+    desp: [
+      "Designed and implemented the E-Feedback feature end to end. The feature allowed customers to submit their feedback and reviews about products they have already bought. This feedback is then available publicly for other customers to view.",
+      "Contributed to the development and maintenance of the company’s design system, multiple react.js-based front-end web applications and microservices backend.",
+    ],
   },
   {
-    title: "Research Intern",
-    cardImage: "assets/images/experience-page/IIT_Bombay.jpg",
-    place: "IIT, Bombay",
-    time: "(Dec, 19 - Jan, 20)",
-    desp: "<li>Worked on the project “LTI (Learning Tools Interoperability) 2.0 standards Implementation for ekShiksha.</li><li>Designed a software that would help faculty to create a quiz using the questions from the database based on his/her choice of topics and he should be provided with various facilities and options to create a quiz of his choice.</li>",
+    title: "Full-stack Web Developer",
+    cardImage: "assets/images/experience-page/cliniserve.png",
+    place: "Cliniserve GmbH – Munich, Germany",
+    time: "(October, 2021 - December, 2022)",
+    desp: [
+      "Designed and implemented a microservice integrating Cliniserve with Aachen University Hospital’s SAP HR system—key to securing them as a VIP customer.",
+
+      "Led a major codebase refactor, restructuring database collections to support advanced use cases previously unachievable.",
+
+      "Optimized database queries on backend significantly improving backend response time.",
+
+      "Migrated the entire CARE and TEAM codebases to TypeScript using a systematic, script-assisted approach to improve code quality and maintainability.",
+
+      "Developed visually appealing react native screens and end to end features for Cliniserve’s OneApp.",
+    ],
+  },
+  {
+    title: "Front-End Developer",
+    cardImage: "assets/images/experience-page/wordbee.png",
+    place: "Wordbee – Cairo, Egypt",
+    time: "(June, 2020 - September, 2021)",
+    desp: [
+      "Implemented Redux middleware to centralize and streamline API authentication logic, improving code clarity and developer productivity.",
+      "Contributed to building the company’s fastest and most efficient CAT editor, focused on performance and lightweight design.",
+      "Evaluated Cypress for E2E testing, delivered a working POC, and enabled the team to start writing tests in the following sprint.",
+      "Applied DOM virtualization to a React table component, boosting scroll performance by over 85% when handling large datasets."
+    ],
+  },
+  {
+    title: "Junior Front-End Developer",
+    cardImage: "assets/images/experience-page/spade_studio.png",
+    place: "Spade Studio – Cairo, Egypt",
+    time: "(February, 2017 - May, 2020)",
+    desp: [
+      "Implemented Redux middleware to centralize and streamline API authentication logic, improving code clarity and developer productivity.",
+      "Contributed to building the company’s fastest and most efficient CAT editor, focused on performance and lightweight design.",
+      "Evaluated Cypress for E2E testing, delivered a working POC, and enabled the team to start writing tests in the following sprint.",
+      "Applied DOM virtualization to a React table component, boosting scroll performance by over 85% when handling large datasets."
+    ],
   },
 ];
 
@@ -45,7 +90,7 @@ const showCards2 = () => {
               <span class="author">${time}</span>
             </p>
             <ol>
-              ${desp}
+              ${desp.map((string) => `<li>${string}</li>`).join("\n")}
             </ol>
           </header>
         </article>
