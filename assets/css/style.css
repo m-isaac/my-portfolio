@@ -239,6 +239,7 @@ html {
   background-color: #fff;
   z-index: 2;
   box-shadow: 0 2px 2px rgb(230, 230, 230);
+  padding: .4rem 1rem 0.1rem
 }
 
 /* Dark Mode toggle switch button */
