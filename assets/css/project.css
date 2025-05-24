@@ -113,12 +113,6 @@ body[light-mode="dark"] .light-mode-button span:nth-child(2) {
   }
 }
 
-@media (max-width: 959) {
-  .projectcards {
-    margin: 10px;
-  }
-}
-
 .img-header {
   width: 90%;
   height: 90%;
