@@ -290,7 +290,23 @@
     </div>
 
     <div class="project-box" style="padding: 20px;">
+        <div class="row">
+            <!-- Dynamically generated project cards -->
+        </div>
 
+        <!-- Modal for Enlarged Thumbnails -->
+        <div id="thumbnailModal" tabindex="-1" role="dialog" aria-labelledby="thumbnailModalLabel" aria-hidden="true">
+                    <div class="modal-body text-center">
+                        <img id="modalImage" src="" alt="Thumbnail" class="img-fluid">
+                        <button id="prevThumbnail" class="btn">
+                          <i class="fas fa-arrow-left"></i>
+                        </button>
+                        <button id="nextThumbnail" class="btn">
+                          <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+        </div>
     </div>
 
     <!-- Dynamic footer section -->
@@ -302,6 +318,26 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="assets/js/project.js"></script>
+    <style>
+/* Update styles for next and previous buttons */
+#prevThumbnail, #nextThumbnail {
+    border: 2px solid white;
+    color: white;
+    font-size: 24px; /* Medium size for visibility */
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%; /* Circular shape */
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#prevThumbnail:hover, #nextThumbnail:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly lighter background on hover */
+}
+</style>
 </body>
 
 </html>

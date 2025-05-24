@@ -137,7 +137,7 @@ let footer = $(`
               </div>
                 <form name="form1" action="https://formcarry.com/s/ADK_IhyX6hs" method="POST" accept-charset="UTF-8" >
                   <input id="name" type="text" name="name" placeholder="Your Name" required/>
-                  <input id="email" type="email" name="email" placeholder="Email Address"/>                  
+                  <input id="email" type="email" name="email" placeholder="Email Address (Optional)"/>                  
                   <textarea id="textArea" name="message" placeholder="Type your Message" required></textarea>
               
                   <div id="main">
