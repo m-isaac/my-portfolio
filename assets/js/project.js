@@ -238,9 +238,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("keydown", function (event) {
     const modal = document.getElementById("thumbnailModal");
-    if (event.key === "Escape" && modal.style.display === "block") {
-      modal.style.display = "none";
-      $("html, body").css("overflow", "auto");
+    if (modal.style.display === "block") {
+      // Handle Escape key
+      if (event.key === "Escape") {
+        modal.style.display = "none";
+        $("html, body").css("overflow", "auto");
+      }
+      // Handle left arrow key
+      else if (event.key === "ArrowLeft") {
+        const project = projects.find((p) => p.id === currentProjectId);
+        currentIndex = (currentIndex - 1 + project.thumbnails.length) % project.thumbnails.length;
+        modalImage.src = project.thumbnails[currentIndex];
+      }
+      // Handle right arrow key
+      else if (event.key === "ArrowRight") {
+        const project = projects.find((p) => p.id === currentProjectId);
+        currentIndex = (currentIndex + 1) % project.thumbnails.length;
+        modalImage.src = project.thumbnails[currentIndex];
+      }
     }
   });
 });
