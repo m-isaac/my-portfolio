@@ -69,6 +69,38 @@ const projects = [
     githubUrl: "https://github.com/m-isaac/stolen-bike-search",
   },
   {
+    id: "pcm",
+    title: "🛍️ Product Catalog Mobile App – React Native & TypeScript",
+    description: `<div>
+        <p>
+          Product Catalog Mobile App is a cross-platform mobile application built with React Native and TypeScript, designed
+           to provide users with a seamless way to browse and explore product information. The app integrates with a product 
+           API to fetch real-time data and presents it through a clean and intuitive interface.
+        </p>
+        <p>
+          This project demonstrates proficiency in building data-driven
+          applications, integrating third-party APIs, and implementing
+          responsive design principles.
+        </p>
+      </div>`,
+    thumbnails: [
+      "assets/images/project-page/pcm/1.png",
+      "assets/images/project-page/pcm/2.png",
+      "assets/images/project-page/pcm/3.png",
+      "assets/images/project-page/pcm/4.png",
+      "assets/images/project-page/pcm/5.png",
+    ],
+    technologies: ["React", "TypeScript", "chart.js"],
+    keyFeatures: [
+      "Product Listing Screen: Displays all available products with thumbnails, names, and quick access to details.",
+      "Product Details Screen: Shows in-depth product information including price, description, and image, accessible by tapping on any product.",
+      "Search Functionality: Users can quickly filter the product list or search for specific products by typing keywords into a search bar.",
+      "Cross-Platform Support: Designed to work consistently and smoothly on both Android and iOS devices.",
+      "Responsive & Intuitive UI: Ensures a user-friendly experience across different screen sizes.",
+    ],
+    githubUrl: "https://github.com/m-isaac/product-catalog",
+  },
+  {
     id: "wzr",
     title: "🌤️ Munich 6-Day Weather Forecast App – React & TypeScript",
     description: `<div>
@@ -167,14 +199,18 @@ document.addEventListener("DOMContentLoaded", function () {
                               )
                               .join("")}
                         </ul>
-                        <div class="technologies">${project.technologies.map(
-              (tech) => `<span>${tech}</span>`
-            ).join("")}</div>
+                        <div class="technologies">${project.technologies
+                          .map((tech) => `<span>${tech}</span>`)
+                          .join("")}</div>
             <div class="project-links">
-                <a href="${project.githubUrl}" target="_blank" class="project-link">
+                <a href="${
+                  project.githubUrl
+                }" target="_blank" class="project-link">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="${project.projectUrl}" target="_blank" class="project-link">
+                <a href="${
+                  project.projectUrl
+                }" target="_blank" class="project-link">
                     <i class="fas fa-external-link-alt"></i>
                 </a>
             </div>
@@ -247,7 +283,9 @@ document.addEventListener("DOMContentLoaded", function () {
       // Handle left arrow key
       else if (event.key === "ArrowLeft") {
         const project = projects.find((p) => p.id === currentProjectId);
-        currentIndex = (currentIndex - 1 + project.thumbnails.length) % project.thumbnails.length;
+        currentIndex =
+          (currentIndex - 1 + project.thumbnails.length) %
+          project.thumbnails.length;
         modalImage.src = project.thumbnails[currentIndex];
       }
       // Handle right arrow key
