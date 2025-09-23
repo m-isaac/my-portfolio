@@ -78,9 +78,8 @@ const projects = [
            API to fetch real-time data and presents it through a clean and intuitive interface.
         </p>
         <p>
-          This project demonstrates proficiency in building data-driven
-          applications, integrating third-party APIs, and implementing
-          responsive design principles.
+          This project demonstrates strong skills in mobile development with React Native,
+           TypeScript, and API integration, while focusing on performance, usability, and consistency across platforms.
         </p>
       </div>`,
     thumbnails: [
@@ -90,7 +89,7 @@ const projects = [
       "assets/images/project-page/pcm/4.png",
       "assets/images/project-page/pcm/5.png",
     ],
-    technologies: ["React", "TypeScript", "chart.js"],
+    technologies: ["React Native", "TypeScript", "Expo"],
     keyFeatures: [
       "Product Listing Screen: Displays all available products with thumbnails, names, and quick access to details.",
       "Product Details Screen: Shows in-depth product information including price, description, and image, accessible by tapping on any product.",
@@ -203,16 +202,14 @@ document.addEventListener("DOMContentLoaded", function () {
                           .map((tech) => `<span>${tech}</span>`)
                           .join("")}</div>
             <div class="project-links">
-                <a href="${
-                  project.githubUrl
-                }" target="_blank" class="project-link">
+                <a href="${project.githubUrl}" target="_blank" class="project-link">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="${
-                  project.projectUrl
-                }" target="_blank" class="project-link">
+                ${project.projectUrl ? `
+                <a href="${project.projectUrl}" target="_blank" class="project-link">
                     <i class="fas fa-external-link-alt"></i>
                 </a>
+                ` : ''}
             </div>
         `;
     projectContainer.appendChild(projectCard);
