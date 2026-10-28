@@ -5,45 +5,45 @@ AOS.init();
 const experiencecards = document.querySelector(".experience-cards");
 const exp = [
   {
-    title: "Senior Frontend engineer",
+    title: "Senior Software Entwickler",
     cardImage: "assets/images/experience-page/idgard.jpg",
-    place: "idgard GmbH",
+    place: "Uniscon GmbH – Munich, Germany",
     time: "(July, 2025 - present)",
     desp: [
-      "Built complex UI features integrating the company’s core product with Microsoft Office apps (Outlook, Word, Excel, Teams) via Office plugins, often leveraging AI tools like Claude, Cursor, and GitHub Copilot.",
+      "Architected and implemented an AI-assisted document workflow for Microsoft Word and Excel using Office.js, React, and TypeScript, integrating contextual AI capabilities directly into the Office environment supporting both user-selected text and full-document context",
 
-      "Resolved a long-standing development bottleneck by making the Outlook plugin testable locally, eliminating the need for live test deployments and drastically improving the development feedback loop.",
+      "Engineered the asynchronous request lifecycle, including UI state management, retries, error boundaries, and graceful failure handling for long-running AI operations.",
 
-      "Developed an automation script to scaffold new apps in the team’s monorepo within seconds—complete with linting, build, serve, and test setups—accelerating development startup time.",
+      "Implemented context-aware response rendering and source highlighting, connecting AI-generated answers to relevant document sections and providing users with a transparent, low-friction workflow without leaving Word or Excel.",
 
-      "Configured backend API mocking in the dev environment, making it easier for the team to write meaningful integration tests.",
+      "Resolved a long-standing development bottleneck by making Outlook project testable locally, eliminating the need for live test deployments and drastically improving the development feedback loop.",
     ],
   },
   {
-    title: "Full-stack Web Developer",
+    title: "Full-stack software engineer",
     cardImage: "assets/images/experience-page/check24.jpg",
     place: "CHECK24 GmbH – Munich, Germany",
     time: "(December 2022 - June, 2025)",
     desp: [
       "Designed and implemented the E-Feedback feature end to end. The feature allowed customers to submit their feedback and reviews about products they have already bought. This feedback is then available publicly for other customers to view.",
-      "Contributed to the development and maintenance of the company’s design system, multiple react.js-based front-end web applications and microservices backend.",
+      "Identified and eliminated a key development bottleneck by containerizing a ~15-service Node.js/TypeScript backend and creating modular Docker Compose setups, enabling independent local development and testing across both frontend and backend teams without reliance on live services.",
+
+      "Introduced an AI-assisted development workflow across 22 repositories, where coding agents implement tickets, verify changes against the containerized Docker Compose environment, and open PRs with test results, cutting average PR cycle time by about 60% for a team of 9 engineers."
     ],
   },
   {
-    title: "Full-stack Web Developer",
+    title: "Product engineer",
     cardImage: "assets/images/experience-page/cliniserve.png",
     place: "Cliniserve GmbH – Munich, Germany",
     time: "(October, 2021 - December, 2022)",
     desp: [
-      "Designed and implemented a microservice integrating Cliniserve with Aachen University Hospital’s SAP HR system—key to securing them as a VIP customer.",
+      "Designed and implemented a microservice integrating Cliniserve with Aachen University Hospital’s SAP HR system, which was key to securing them as a VIP customer.",
 
-      "Led a major codebase refactor, restructuring database collections to support advanced use cases previously unachievable.",
-
-      "Optimized database queries on backend significantly improving backend response time.",
+      "Optimized database queries on backend improving backend response time by 75%.",
 
       "Migrated the entire CARE and TEAM codebases to TypeScript using a systematic, script-assisted approach to improve code quality and maintainability.",
 
-      "Developed visually appealing react native screens and end to end features for Cliniserve’s OneApp.",
+      "Developed visually appealing react native screens and end to end features for Cliniserve’s mobile app.",
     ],
   },
   {
@@ -53,21 +53,19 @@ const exp = [
     time: "(June, 2020 - September, 2021)",
     desp: [
       "Implemented Redux middleware to centralize and streamline API authentication logic, improving code clarity and developer productivity.",
-      "Contributed to building the company’s fastest and most efficient CAT editor, focused on performance and lightweight design.",
+      "Built the company’s fastest and most efficient CAT editor, focused on performance and lightweight design.",
       "Evaluated Cypress for E2E testing, delivered a working POC, and enabled the team to start writing tests in the following sprint.",
       "Applied DOM virtualization to a React table component, boosting scroll performance by over 85% when handling large datasets."
     ],
   },
   {
-    title: "Junior Front-End Developer",
+    title: "Front-End Web Developer",
     cardImage: "assets/images/experience-page/spade_studio.png",
     place: "Spade Studio – Cairo, Egypt",
     time: "(February, 2017 - May, 2020)",
     desp: [
-      "Implemented Redux middleware to centralize and streamline API authentication logic, improving code clarity and developer productivity.",
-      "Contributed to building the company’s fastest and most efficient CAT editor, focused on performance and lightweight design.",
-      "Evaluated Cypress for E2E testing, delivered a working POC, and enabled the team to start writing tests in the following sprint.",
-      "Applied DOM virtualization to a React table component, boosting scroll performance by over 85% when handling large datasets."
+      "Built a secure donation platform for Misr El-Khier NGO, enabling seamless user interaction.",
+      "Implemented complex financial validation logic to ensure data accuracy and regulatory compliance.",
     ],
   },
 ];
